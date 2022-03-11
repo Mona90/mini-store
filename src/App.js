@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import { useState, createContext } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './Components/Header';
+import Category from './pages/Category';
+import { Route, Routes } from 'react-router-dom';
+import PDP from './pages/PDP/PDP';
+import Cart from './pages/cart/Cart';
+
+export const productsData = createContext([]);
 
 function App() {
+  const [data, setData] = useState([])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <productsData.Provider value={{data, setData}}>
+        <Header/>
+        <Routes>
+            <Route index  path="/"  element={<Category/>}/>
+            <Route path="/PDP/:id" element={<PDP/>}/>
+            <Route path="cart" element={<Cart/>}/>
+        </Routes>
+    </productsData.Provider>
+
   );
 }
 

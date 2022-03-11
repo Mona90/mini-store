@@ -1,0 +1,49 @@
+{
+    "products":[
+        {
+        "id":1,
+        "title":"Apollo Running Short",
+        "img_url":"/images/products/Product1.png",
+        "description":"Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.",
+        "sizes":["XS", "S", "M", "L", "XL"],
+        "price":"$50"
+    },
+    {
+        "id":2,
+        "title":"Apollo Running Short",
+        "img_url":"/images/products/Product2.png",
+        "description":"Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.",
+        "sizes":["XS", "S", "M", "L", "XL"],
+        "price":"$100"
+    }, {
+        "id":3,
+        "title":"Apollo Running Short",
+        "img_url":"/images/products/Product3.png",
+        "description":"Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.",
+        "sizes":["XS", "S", "M", "L", "XL"],
+        "price":"$75"
+    }, {
+        "id":4,
+        "title":"Apollo Running Short",
+        "img_url":"/images/products/Product4.png",
+        "description":"Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.",
+        "sizes":["XS", "S", "M", "L", "XL"],
+        "price":"$150"
+    },
+    {
+        "id":5,
+        "title":"Apollo Running Short",
+        "img_url":"/images/products/Product2.png",
+        "description":"Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.",
+        "sizes":["XS", "S", "M", "L", "XL"],
+        "price":"$50"
+    }, {
+        "id":6,
+        "title":"Apollo Running Short",
+        "img_url":"/images/products/Product3.png",
+        "description":"Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.",
+        "sizes":["XS", "S", "M", "L", "XL"],
+        "price":"$75"
+    }
+]
+}
