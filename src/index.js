@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import {  ApolloProvider } from '@apollo/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import product from './Service/reducer';
+import { swiftClient } from './Appollo';
 
 
-const client = new ApolloClient({
-  uri: 'https://48p1r2roz4.sse.codesandbox.io',
-  cache: new InMemoryCache()
-});
 // client
 // .query({
 //   query: gql`
@@ -36,7 +33,7 @@ const store = createStore(product)
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-        <ApolloProvider client={client}>
+        <ApolloProvider client={swiftClient}>
           <Provider store={store}>
           <App />
           </Provider>
