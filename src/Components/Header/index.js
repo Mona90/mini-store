@@ -1,52 +1,69 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { connect } from 'react-redux'
+import { NavBar} from './style'
+import {add_to_cart} from '../../Store/action'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faCartShopping,faBars} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
-import { CartIcon, NavLink} from './style'
-function Header(props) {
-    // const cartProducts = props.add_to_cart
 
-    // useEffect(()=>{
-    //     console.log('mona',  cartProducts)  
-    //   },[cartProducts])
-       
+
+function Header({product, setShowMenu,showMenu }) {
+     console.log('from header',showMenu)
+    const [show, setShow] = useState(false)
+    const [totalPrice, setTotalPrice] = useState(0)
+    const cartProducts = product
+    const ItemsNumber = cartProducts.length
+       useEffect(()=>{
+           for(let product of cartProducts){
+            setTotalPrice(prevCount => prevCount + parseInt(product.price))
+
+           }
+
+           return totalPrice
+
+       },[setTotalPrice,cartProducts])
   return (
-    <div className='navbar'>
+    <NavBar className='navbar'>
         <div className='container' >
-            <nav className='nav'>
-                <NavLink className='nav-link active' href="/">women</NavLink>
-                <NavLink className='nav-link' href="">Men</NavLink>
-                <NavLink className='nav-link' href="">Kids</NavLink>
-            </nav>
-            <div className='navbar-brand logo'>
-                <img src='/images/icons/logo.png' alt="logo"/>
+            <div className='d-flex justify-content-start align-items-center'>
+                <FontAwesomeIcon className='bars-icon me-3' icon={faBars} onClick={()=>{
+                    console.log('clickedddd')
+                    setShowMenu(!showMenu)}}/>
+                <Link to="/" className='navbar-brand logo'>
+                    <img src='/images/logo.png' alt="logo"/>
+                </Link>
             </div>
             <div className='d-flex'>
-                <div className='currancy dropdown mx-3'>
-                    <div className='dropdown-toggle'>
-                        <span className='unit' id="currancy-dropdown">$</span>
-                    </div>
-                    <ul className='dropdown-menu' aria-labelledby="currancy-dropdown"></ul>
-                </div>
                 <div className='cart dropdown'>
-                    <CartIcon className='dropdown-toggle' id="cart-dropdown" role="dropdown">
-                        <Link to="/cart"><img className=''  src='/images/icons/cart.png' style={{width:'20px'}} alt="cart"/></Link>
-                    </CartIcon>
-                    <ul className='dropdown-menu' aria-labelledby="cart-dropdown">
-                        {/* {cartProducts.map(product => {
-                            return(
-                                <li>{product.productId}</li>
+                    <div className='cartIcon position-relative'>
+                        <FontAwesomeIcon icon={faCartShopping}  onClick={()=>setShow(!show)}/>
+
+                        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                            {ItemsNumber}
+                        </span>
+                    </div>
+                    <ul className={show? 'dropdown-menu d-block':'d-none'}>
+                        {cartProducts && cartProducts.map((product,i) => (
+                                <li className='item' key={i}>
+                                    <div className='product-details'>
+                                        <h4>{product.title}</h4> 
+                                        <span>{product.price}</span>
+                                    </div>
+                                    <div className='product-img ms-3'>
+                                        <img className='img-fluid' src={product.img} alt="product"/>
+                                    </div>
+                                </li>
                             )
-                        })} */}
+                        )}
+                        <p className='price-total'>Total:{totalPrice}</p>
+                        <Link className='view-cart' to="cart">View Cart</Link>
                     </ul>    
                 </div>
             </div>
         </div>
-    </div>
+    </NavBar>
   )
 }
-// const style = {
-//     Button:{
-//         fontSize: '15px',
-//         fontWeight: 500,
-//     }
-// }
-export default Header
+export default connect((state)=>{
+    return {product:state}
+},{add_to_cart})(Header)

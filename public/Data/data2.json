@@ -1,0 +1,85 @@
+{
+    "products":[
+        {
+        "id":1,
+        "title":"Petite Table Lamp",
+        "img_preview":"/images/products/product-7-1.jpg",
+        "img_hover":"/images/products/product-7-2.jpg",
+        "category":"Lighting",
+        "new_price":"401"
+    },
+    {
+        "id":2,
+        "title":"Madra Log Holder",
+        "img_preview":"/images/products/product-8-1.jpg",
+        "img_hover":"/images/products/product-8-2.jpg",
+        "category":"Decor",
+        "new_price":"401"
+    }, {
+        "id":3,
+        "title":"Garden Armchair",
+        "img_preview":"/images/products/product-9-1.jpg",
+        "img_hover":"/images/products/product-9-2.jpg",
+        "category":"Furniture",
+        "new_price":"94",
+        "old_price":"94"
+    }, {
+        "id":4,
+        "title":"Carronade Large Suspension Lamp",
+        "img_preview":"/images/products/product-10-1.jpg",
+        "img_hover":"/images/products/product-10-2.jpg",
+        "category":"Lighting",
+        "new_price":"401",
+        "old_price":""
+    },
+    {
+        "id":5,
+        "title":"Original Outdoor Beanbag",
+        "img_preview":"/images/products/product-11-1.jpg",
+        "img_hover":"/images/products/product-11-2.jpg",
+        "category":"Decor",
+        "new_price":"259",
+        "old_price":""
+    }, {
+        "id":6,
+        "title":"2-Seater",
+        "img_preview":"/images/products/product-12-1.jpg",
+        "img_hover":"/images/products/product-12-2.jpg",
+        "category":"Furniture",
+        "new_price":"3.107",
+        "old_price":""
+    }, {
+        "id":7,
+        "title":"Wingback Chair",
+        "img_preview":"/images/products/product-13-1.jpg",
+        "img_hover":"/images/products/product-13-2.jpg",
+        "category":"Furniture",
+        "new_price":"2.486",
+        "old_price":""
+    }, {
+        "id":8,
+        "title":"Cushion Set 3 Pieces",
+        "img_preview":"/images/products/product-14-1.jpg",
+        "img_hover":"/images/products/product-14-2.jpg",
+        "category":"Decor",
+        "new_price":"199",
+        "old_price":""
+    }, {
+        "id":9,
+        "title":"Cushion Set 3 Pieces",
+        "img_preview":"/images/products/product-15-1.jpg",
+        "img_hover":"/images/products/product-15-2.jpg",
+        "category":"Decor",
+        "new_price":"199",
+        "old_price":""
+    }, {
+        "id":10,
+        "title":"Carronade Table Lamp",
+        "img_preview":"/images/products/product-16-1.jpg",
+        "img_hover":"/images/products/product-16-2.jpg",
+        "category":"Lighting",
+        "new_price":"499",
+        "old_price":""
+    }
+]
+}
