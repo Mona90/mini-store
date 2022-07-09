@@ -3,10 +3,11 @@ import {read_cookie, bake_cookie} from 'sfcookies'
 
 
 const product = (state =[], action) => {
+    // bake_cookie('product', [])
     let product = state
     state = read_cookie('product');
     if (action.type === ADD_TO_CART){
-        console.log('testttt', state, action.payload)
+        // console.log('testttt', state, action.payload)
         if(state.length === 0){
             product = [...state, { ...action.payload }]
             bake_cookie('product', product)
@@ -20,7 +21,7 @@ const product = (state =[], action) => {
                 else{
                     product = [...state, { ...action.payload }]
                     bake_cookie('product', product)
-                     console.log('from reducer', product)
+                    //  console.log('from reducer', product)
     
     
                 

@@ -8,7 +8,7 @@ import Slider from '../../Components/Slider/Slider'
 const Home = () => {
    const [showMenu, setShowMenu] = useState(false)
     
-    console.log(showMenu)
+    // console.log(showMenu)
   return (
     <div style={{...styles.mainStyle,paddingLeft:showMenu? '200px':'0'}}>
         <Header setShowMenu={setShowMenu} showMenu={showMenu}/>

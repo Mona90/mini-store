@@ -10,7 +10,7 @@ export const add_to_cart = (id,title,price,img) =>{
             img
         }
     }
-    console.log('add', action)
+    // console.log('add', action)
    return action
 }
 
@@ -19,7 +19,7 @@ export const remove_from_cart = (data) =>{
         type: REMOVE_FROM_CART,
         data
     }
-    console.log('remove', action)
+    // console.log('remove', action)
    return action
 }
 

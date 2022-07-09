@@ -10,7 +10,7 @@ import {add_to_cart} from '../../Store/action'
 
 function Products(props) {
 
-  console.log('testRdux', props)
+  // console.log('testRdux', props)
     const imgSource = useRef(null)
     const [products, setProducts] = useState([])
     useEffect(()=>{

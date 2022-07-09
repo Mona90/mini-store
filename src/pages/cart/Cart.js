@@ -11,7 +11,7 @@ import {  TableBody } from './style'
 function Cart(props) {
      const [showMenu, setShowMenu] = useState(false)
     const products = props.product
-    console.log('cart_Page',  products)  
+    // console.log('cart_Page',  products)  
 
       
   return (

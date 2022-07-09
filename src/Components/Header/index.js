@@ -8,17 +8,19 @@ import { Link } from 'react-router-dom'
 
 
 function Header({product, setShowMenu,showMenu }) {
-     console.log('from header',showMenu)
+    //  console.log('from header',showMenu)
     const [show, setShow] = useState(false)
     const [totalPrice, setTotalPrice] = useState(0)
     const cartProducts = product
     const ItemsNumber = cartProducts.length
        useEffect(()=>{
+        let sum = 0
            for(let product of cartProducts){
-            setTotalPrice(prevCount => prevCount + parseInt(product.price))
+            // setTotalPrice(prevCount => prevCount + parseInt(product.price))
+            sum += parseInt(product.price)
 
            }
-
+           setTotalPrice(sum)
            return totalPrice
 
        },[setTotalPrice,cartProducts])
@@ -27,7 +29,7 @@ function Header({product, setShowMenu,showMenu }) {
         <div className='container' >
             <div className='d-flex justify-content-start align-items-center'>
                 <FontAwesomeIcon className='bars-icon me-3' icon={faBars} onClick={()=>{
-                    console.log('clickedddd')
+                    // console.log('clickedddd')
                     setShowMenu(!showMenu)}}/>
                 <Link to="/" className='navbar-brand logo'>
                     <img src='/images/logo.png' alt="logo"/>
